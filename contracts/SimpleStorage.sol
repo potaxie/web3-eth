@@ -1,17 +1,18 @@
 contract SimpleStorage{
-    string _message;
+    string str;
 
-    constructor(string src) public{
-        _message = src;
+
+    constructor(string _str) public{
+        str = _str;
     }
 
-    function setMessage(string message) public{
-        _message = message;
+    function setValue(string _str) public{
+        str = _str;
     }
 
 
-    function getMessage() public view returns(string){
-        return _message;
+    function getValue() public view returns(string){
+        return str;
     }
 
 
