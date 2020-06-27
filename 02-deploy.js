@@ -18,7 +18,9 @@ web3.setProvider('http://localhost:7545')
 console.log('version:________', web3.version)
 console.log('web3-eth.curretProvider_____________', web3.currentProvider)
 
-const account ='0x4545E02DEbC248C5D7EBf20a6E1730D2c5B0a868'
+
+//此地址需要使用Ganache地址
+const account ='0xd4DB91aCBB5Be2a42276567c7473857e14888B53'
 
 //1.拼接合约数据interface
 let contract = new web3.eth.Contract(JSON.parse(interface))
@@ -33,5 +35,6 @@ contract.deploy({
 }).then(instance =>{
     console.log('address:',instance.options.address)
 })
+
 
 //3.合约部署
